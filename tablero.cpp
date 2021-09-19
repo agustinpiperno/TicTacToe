@@ -45,6 +45,9 @@ void destruirTablero(Tablero * tablero){
 			delete tablero -> casilleros[i][j];
 		}
 	}
+	for(int j= 0; j < ALTO; j++){
+		delete[] tablero -> casilleros[j];
+	}
 	delete[] tablero -> casilleros;
 	delete tablero;
 	tablero = NULL;

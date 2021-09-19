@@ -26,7 +26,7 @@ int main(int argc, char ** argv){
 					try{
 						asignarFicha(tablero,posicionX,posicionY, ficha);
 						preguntarPosicion = false;
-					} catch(string){
+				} catch (string&) {
 						cout << "La posicion es invalida, ingrese otra posicion" << endl;
 					  }
 				}
@@ -43,7 +43,7 @@ int main(int argc, char ** argv){
 					try{
 						asignarFicha(tablero,posicionX,posicionY, ficha);
 						preguntarPosicion = false;
-					} catch(string){
+				} catch (string&) {
 						cout << "La posicion es invalida, ingrese otra posicion" << endl;
 						}
 				}
