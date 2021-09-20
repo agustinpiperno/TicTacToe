@@ -1,7 +1,8 @@
 #ifndef INCLUDE_CASILLERO_H_
 #define INCLUDE_CASILLERO_H_
 
-#include "tablero.h"
+#define CASILLEROVACIO '-'
+#define MAXFICHAS 6 // MAXFICHAS = cantidad de jugadores * 3
 
 typedef struct{
 	char valor;
@@ -10,7 +11,7 @@ typedef struct{
 enum tipoFicha {primeraFicha = 'O', ultimaFicha = 'X'};
 
 Casillero * inicializarCasillero();
-
+void destruirCasillero(Casillero * casillero);
 
 
 
