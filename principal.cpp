@@ -20,7 +20,7 @@ int main(int argc, char ** argv){
 		preguntarPosicion = true;
 		switch(ficha){
 			case primeraFicha:
-				cout << MSGINGRESARPOS << endl;
+				cout << MSG_INGRESAR_POS << endl;
 				while(preguntarPosicion){
 					cin >> posicionX;
 					cin >> posicionY;
@@ -41,7 +41,7 @@ int main(int argc, char ** argv){
 				break;
 
 			case ultimaFicha:
-				cout << MSGINGRESARPOS << endl;
+				cout << MSG_INGRESAR_POS << endl;
 				while(preguntarPosicion){
 					cin >> posicionX;
 					cin >> posicionY;
@@ -70,7 +70,7 @@ int main(int argc, char ** argv){
 		switch(ficha){
 			case primeraFicha:
 				while(preguntarPosicion){
-					cout << MSGMOVERPOS << endl;
+					cout << MSG_MOVER_POS << endl;
 					cin >> posicionInicialX;
 					cin >> posicionInicialY;
 					try{
@@ -82,7 +82,7 @@ int main(int argc, char ** argv){
 				}
 				preguntarPosicion = true;
 				while(preguntarPosicion){
-					cout << MSGINGRESARPOS << endl;
+					cout << MSG_INGRESAR_POS << endl;
 					cin >> posicionX;
 					cin >> posicionY;
 					try{
@@ -102,7 +102,7 @@ int main(int argc, char ** argv){
 
 			case ultimaFicha:
 				while(preguntarPosicion){
-					cout << MSGMOVERPOS << endl;
+					cout << MSG_MOVER_POS << endl;
 					cin >> posicionInicialX;
 					cin >> posicionInicialY;
 					try{
@@ -114,7 +114,7 @@ int main(int argc, char ** argv){
 				}
 				preguntarPosicion = true;
 				while(preguntarPosicion){
-					cout << MSGINGRESARPOS << endl;
+					cout << MSG_INGRESAR_POS << endl;
 					cin >> posicionX;
 					cin >> posicionY;
 					try{

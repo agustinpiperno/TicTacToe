@@ -1,12 +1,12 @@
 #ifndef MENSAJES_H_
 #define MENSAJES_H_
 
-#define MSGINGRESARPOS "Ingrese una posicion:"
-#define MSGPOSINVALIDA "La posicion es invalida, ingrese otra posicion:"
-#define MSGMOVERPOS "Ingrese la posicion de la ficha a mover:"
-#define MSGFICHABLOQUEADA "No se puede mover la ficha."
-#define MSGCASILLEROOCUPADO "EL casillero esta ocupado, ingrese otra posicion:"
-#define MSGFICHANOENCONTRADA "El casillero no tiene tu ficha."
-#define MSGGANADOR1 "Jugador con la ficha "
-#define MSGGANADOR2 " gana!"
+#define MSG_INGRESAR_POS "Ingrese una posicion:"
+#define MSG_POS_INVALIDA "La posicion es invalida, ingrese otra posicion:"
+#define MSG_MOVER_POS "Ingrese la posicion de la ficha a mover:"
+#define MSG_FICHA_BLOQUEADA "No se puede mover la ficha."
+#define MSG_CASILLERO_OCUPADO "EL casillero esta ocupado, ingrese otra posicion:"
+#define MSG_FICHA_NO_ENCONTRADA "El casillero no tiene tu ficha."
+#define MSG_GANADOR1 "Jugador con la ficha "
+#define MSG_GANADOR2 " gana!"
 #endif /* MENSAJES_H_ */

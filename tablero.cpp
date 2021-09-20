@@ -56,44 +56,44 @@ void destruirTablero(Tablero * tablero){
 
 void asignarFicha(Tablero * tablero, int x, int y, char ficha){
 	if( (x >= ALTO || x < 0) || (y >= ANCHO || y < 0)){
-		throw string(MSGPOSINVALIDA);
+		throw string(MSG_POS_INVALIDA);
 	}
 	asignarFicha(tablero -> casilleros[x][y], ficha);
 }
 
 void asignarFicha(Casillero * casillero, char ficha){
 	if(casillero -> valor != CASILLEROVACIO){
-		throw string(MSGCASILLEROOCUPADO);
+		throw string(MSG_CASILLERO_OCUPADO);
 	}
 	casillero -> valor = ficha;
 }
 
 void quitarFicha(Tablero * tablero, int x, int y, char ficha){
 	if((x >= ALTO || x < 0) || (y >= ANCHO || y < 0)){
-		throw string(MSGPOSINVALIDA);
+		throw string(MSG_POS_INVALIDA);
 	}
 	if(x == 0 && y == 0){
 		if(tablero -> casilleros[x+1][y] -> valor != CASILLEROVACIO
 		   && tablero -> casilleros[x][y+1] -> valor != CASILLEROVACIO){
-			throw string(MSGFICHABLOQUEADA);
+			throw string(MSG_FICHA_BLOQUEADA);
 		}
 	}
 	if(x == 0 && y == ANCHO-1){
 			if(tablero -> casilleros[x+1][y] -> valor != CASILLEROVACIO
 			   && tablero -> casilleros[x][y-1] -> valor != CASILLEROVACIO){
-				throw string(MSGFICHABLOQUEADA);
+				throw string(MSG_FICHA_BLOQUEADA);
 			}
 	}
 	if(x == ALTO-1 && y == 0){
 			if(tablero -> casilleros[x-1][y] -> valor != CASILLEROVACIO
 			   && tablero -> casilleros[x][y+1] -> valor != CASILLEROVACIO){
-				throw string(MSGFICHABLOQUEADA);
+				throw string(MSG_FICHA_BLOQUEADA);
 			}
 	}
 	if(x == ALTO-1 && y == ANCHO-1){
 			if(tablero -> casilleros[x-1][y] -> valor != CASILLEROVACIO
 			   && tablero -> casilleros[x][y-1] -> valor != CASILLEROVACIO){
-				throw string(MSGFICHABLOQUEADA);
+				throw string(MSG_FICHA_BLOQUEADA);
 			}
 	}
 	quitarFicha(tablero -> casilleros[x][y], ficha);
@@ -101,7 +101,7 @@ void quitarFicha(Tablero * tablero, int x, int y, char ficha){
 
 void quitarFicha(Casillero * casillero, char ficha){
 	if(casillero -> valor != ficha){
-		throw string(MSGFICHANOENCONTRADA);
+		throw string(MSG_FICHA_NO_ENCONTRADA);
 	}
 	casillero -> valor = CASILLEROVACIO;
 }
@@ -113,7 +113,7 @@ void moverFicha(Tablero * tablero, int x, int y, int xInicial, int yInicial, cha
 		|| (x != xInicial && y != yInicial)
 		|| (x == xInicial && y == yInicial)
 	  ){
-		throw string(MSGPOSINVALIDA);
+		throw string(MSG_POS_INVALIDA);
 	}
 	asignarFicha(tablero -> casilleros[x][y], ficha);
 }
@@ -184,5 +184,5 @@ bool verificarAntiDiagonal(Tablero* tablero, int x, int y, char ficha){
 }
 
 void imprimirGanador(char ficha){
-	cout << MSGGANADOR1 << ficha << MSGGANADOR2 << endl;
+	cout << MSG_GANADOR1 << ficha << MSG_GANADOR2 << endl;
 }
